@@ -34,6 +34,19 @@ class TwoPointer:
             i += 1
         return non_duplicate
 
+    def RemoveKeyInstance(self, key):
+
+        i = 0
+        non_duplicate = 0
+
+        while(i<len(self.givenInput)):
+            if self.givenInput[i] != key:
+                self.givenInput[non_duplicate] = self.givenInput[i]
+                non_duplicate += 1
+        return non_duplicate
+
+            
+
 x = list(map(int, input('Enter the given input -> ').split()))
 # y = int(input('Enter the target value - > '))
 test = TwoPointer(x)
